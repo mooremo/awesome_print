@@ -12,26 +12,27 @@ unless defined?(AwesomePrint::Inspector)
     require File.dirname(__FILE__) + "/awesome_print/core_ext/#{file}"
   end
 
-  require File.dirname(__FILE__) + "/awesome_print/inspector"
-  require File.dirname(__FILE__) + "/awesome_print/formatter"
-  require File.dirname(__FILE__) + "/awesome_print/version"
-  require File.dirname(__FILE__) + "/awesome_print/core_ext/logger" if defined?(Logger)
+  require File.dirname(__FILE__) + '/awesome_print/inspector'
+  require File.dirname(__FILE__) + '/awesome_print/formatter'
+  require File.dirname(__FILE__) + '/awesome_print/version'
+  require File.dirname(__FILE__) + '/awesome_print/core_ext/logger' if defined?(Logger)
   #
   # Load the following under normal circumstances as well as in Rails
   # console when required from ~/.irbrc or ~/.pryrc.
   #
-  require File.dirname(__FILE__) + "/awesome_print/ext/active_record"  if defined?(ActiveRecord)  || AwesomePrint.rails_console?
-  require File.dirname(__FILE__) + "/awesome_print/ext/active_support" if defined?(ActiveSupport) || AwesomePrint.rails_console?
+  require File.dirname(__FILE__) + '/awesome_print/ext/active_record'  if defined?(ActiveRecord)  || AwesomePrint.rails_console?
+  require File.dirname(__FILE__) + '/awesome_print/ext/active_support' if defined?(ActiveSupport) || AwesomePrint.rails_console?
   #
   # Load remaining extensions.
   #
-  require File.dirname(__FILE__) + "/awesome_print/ext/action_view"    if defined?(ActionView::Base)
-  require File.dirname(__FILE__) + "/awesome_print/ext/mongo_mapper"   if defined?(MongoMapper)
-  require File.dirname(__FILE__) + "/awesome_print/ext/mongoid"        if defined?(Mongoid)
-  require File.dirname(__FILE__) + "/awesome_print/ext/nokogiri"       if defined?(Nokogiri)
-  require File.dirname(__FILE__) + "/awesome_print/ext/no_brainer"     if defined?(NoBrainer)
-  require File.dirname(__FILE__) + "/awesome_print/ext/ripple"         if defined?(Ripple)
-  require File.dirname(__FILE__) + "/awesome_print/ext/sequel"         if defined?(Sequel)
-  require File.dirname(__FILE__) + "/awesome_print/ext/ostruct"        if defined?(OpenStruct)
-  require File.dirname(__FILE__) + "/awesome_print/ext/ical_event"     if defined?(Icalendar) && defined?(IceCube)
+  require File.dirname(__FILE__) + '/awesome_print/ext/action_view'       if defined?(ActionView::Base)
+  require File.dirname(__FILE__) + '/awesome_print/ext/mongo_mapper'      if defined?(MongoMapper)
+  require File.dirname(__FILE__) + '/awesome_print/ext/mongoid'           if defined?(Mongoid)
+  require File.dirname(__FILE__) + '/awesome_print/ext/nokogiri'          if defined?(Nokogiri)
+  require File.dirname(__FILE__) + '/awesome_print/ext/no_brainer'        if defined?(NoBrainer)
+  require File.dirname(__FILE__) + '/awesome_print/ext/ripple'            if defined?(Ripple)
+  require File.dirname(__FILE__) + '/awesome_print/ext/sequel'            if defined?(Sequel)
+  require File.dirname(__FILE__) + '/awesome_print/ext/ostruct'           if defined?(OpenStruct)
+  require File.dirname(__FILE__) + '/awesome_print/ext/ice_cube_schedule' if defined?(IceCube)
+  require File.dirname(__FILE__) + '/awesome_print/ext/ical_event'        if defined?(Icalendar) && defined?(IceCube)
 end
