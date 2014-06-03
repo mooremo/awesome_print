@@ -106,10 +106,10 @@ module AwesomePrint
           [ @inspector.awesome(key), h[key] ]
         end
       end
-      
+
       width = data.map { |key, | key.size }.max || 0
       width += @indentation if @options[:indent] > 0
-  
+
       data = data.map do |key, value|
         indented do
           align(key, width) << colorize(" => ", :hash) << @inspector.awesome(value)

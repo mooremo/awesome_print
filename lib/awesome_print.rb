@@ -34,5 +34,5 @@ unless defined?(AwesomePrint::Inspector)
   require File.dirname(__FILE__) + '/awesome_print/ext/sequel'            if defined?(Sequel)
   require File.dirname(__FILE__) + '/awesome_print/ext/ostruct'           if defined?(OpenStruct)
   require File.dirname(__FILE__) + '/awesome_print/ext/ice_cube_schedule' if defined?(IceCube)
-  require File.dirname(__FILE__) + '/awesome_print/ext/ical_event'        if defined?(Icalendar) && defined?(IceCube)
+  require File.dirname(__FILE__) + '/awesome_print/ext/ical_component'    if defined?(Icalendar)
 end
